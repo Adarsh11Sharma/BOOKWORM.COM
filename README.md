@@ -1,64 +1,75 @@
-🚀 BOOKWORM.COM — E-Book Management System
+🚀 BOOKWORM.COM
+📚 Full-Stack E-Book Management & Rental System
 
-Full-Stack E-Book Store & Rental Platform Built with Spring Boot, React.js, MySQL, Docker & JWT
+A secure, scalable, and containerized full-stack web application for managing an online e-book store with purchase, rental, and royalty tracking capabilities.
 
-📌 Project Overview
+🧠 Project Overview
 
-BOOKWORM.COM is a full-stack web application designed to manage an online bookstore with e-book purchase and rental capabilities.
+BOOKWORM.COM is a full-stack web application designed to simulate a real-world digital bookstore platform.
 
-The system provides secure authentication, digital content management, automated royalty tracking, and a scalable REST API architecture.
+It enables users to:
 
-This project demonstrates real-world implementation of authentication, role-based access control, database design, containerization, and full-stack integration.
+Browse e-books
 
-🎯 Key Features 🔐 Secure Authentication
+Purchase or rent books
+
+Manage their digital library
+
+Access content with time-based controls
+
+The system ensures secure authentication, clean API architecture, and automated royalty calculations for authors.
+
+✨ Core Features
+🔐 Secure Authentication & Authorization
 
 JWT-based authentication
 
-Role-based access (Admin / User)
-
-Secure REST API endpoints
-
 Spring Security integration
 
-📚 E-Book Management
+Role-based access (Admin / User)
 
-Add, update, delete books (Admin)
+Protected REST endpoints
 
-Book categorization
+📚 E-Book Management (Admin)
 
-Rental and purchase options
+Add / Update / Delete books
 
-Time-based access control for rented books
+Manage categories
+
+Set pricing & rental duration
+
+Maintain inventory records
 
 🛒 Purchase & Rental System
 
 E-book purchase functionality
 
-Rental system with expiration tracking
+Rental with expiration control
 
-Personal digital library for users
+Personal digital library
 
-Transaction history management
+Transaction history tracking
 
-💰 Royalty Management System
+💰 Automated Royalty System
 
-Automated royalty calculation
+Author royalty calculation
 
-Track author earnings
+Revenue tracking per transaction
 
-Revenue tracking system
+Automated royalty distribution logic
 
-Transaction-based royalty distribution
+📦 Dockerized Deployment
 
-📦 Containerized Deployment
+Backend containerization
 
-Dockerized backend & database
+MySQL container support
 
-Easy environment setup
+Easy local deployment setup
 
 Production-ready configuration
 
-🛠️ Tech Stack 🎨 Frontend
+🛠️ Tech Stack
+🎨 Frontend
 
 React.js
 
@@ -92,87 +103,101 @@ Maven 3
 
 MySQL 8
 
-Entity Relationship Schema Design
+Structured relational schema
 
-Transaction & Royalty Tracking
+Transaction & royalty tracking
 
-🧩 Additional Technologies
+🧩 Additional Module
 
-.NET Core 8.0 (Secondary Module)
+.NET Core 8.0
 
 Entity Framework
 
-Docker
-
-RESTful Architecture
-
 🏗️ System Architecture
 
-The application follows a layered architecture:
+The project follows a Layered Architecture Pattern:
 
-Controller Layer ↓ Service Layer ↓ Repository Layer (JPA) ↓ MySQL Database
+Controller Layer
+        ↓
+Service Layer
+        ↓
+Repository Layer (JPA)
+        ↓
+MySQL Database
 
-Benefits:
+✅ Benefits:
 
 Clean separation of concerns
 
-Scalable API structure
+Scalable backend structure
 
-Secure authentication flow
+Secure API communication
 
-Maintainable and testable code
+Easy maintainability & testing
 
-📁 Project Structure BOOKWORM.COM/ │ ├── BOOKWORM_PRO/ # Spring Boot Backend ├── BookWormNET/ # .NET Core Backend Module ├── frontend-updated_29morning/ # React Frontend │ └── README.md
+📁 Project Structure
+BOOKWORM.COM/
+│
+├── BOOKWORM_PRO/                  # Spring Boot Backend
+├── BookWormNET/                   # .NET Core Backend Module
+├── frontend-updated_29morning/    # React Frontend
+│
+└── README.md
 
-🔄 Application Flow
+🔄 Application Workflow
 
-User registers / logs in (JWT authentication)
+1️⃣ User registers / logs in (JWT authentication)
+2️⃣ User browses available books
+3️⃣ User purchases or rents an e-book
+4️⃣ Transaction is recorded
+5️⃣ Royalty is calculated automatically
+6️⃣ Book is added to digital library
+7️⃣ Rental expires automatically (if rented)
 
-User browses available e-books
+⚙️ Running the Project Locally
+1️⃣ Clone Repository
+git clone https://github.com/Adarsh11Sharma/BOOKWORM.COM.git
+cd BOOKWORM.COM
 
-User purchases or rents book
+2️⃣ Setup Database
 
-System records transaction
-
-Royalty automatically calculated
-
-Book added to user’s digital library
-
-Rental access expires automatically (if rented)
-
-⚙️ How to Run Locally ✅ 1. Clone Repository git clone https://github.com/Adarsh11Sharma/BOOKWORM.COM.git cd BOOKWORM.COM
-
-✅ 2. Setup MySQL Database
-
-Create a database in MySQL
+Create MySQL database
 
 Update application.properties with credentials
 
-✅ 3. Run Spring Boot Backend cd BOOKWORM_PRO mvn spring-boot:run
+3️⃣ Run Spring Boot Backend
+cd BOOKWORM_PRO
+mvn spring-boot:run
 
-Runs on:
+
+Backend runs on:
 
 http://localhost:8080
 
-✅ 4. Run React Frontend cd frontend-updated_29morning npm install npm run dev
+4️⃣ Run React Frontend
+cd frontend-updated_29morning
+npm install
+npm run dev
 
-Runs on:
+
+Frontend runs on:
 
 http://localhost:5173
 
-✅ 5. (Optional) Run with Docker docker-compose up --build
+5️⃣ Run with Docker (Optional)
+docker-compose up --build
 
 🔐 Security Highlights
 
-JWT token-based authentication
+JWT token authentication
 
-Secure password encryption
+Encrypted password storage
 
 Role-based access control
 
-Protected REST endpoints
+Protected REST APIs
 
-Axios interceptor for token management
+Axios interceptor for token handling
 
 🚀 Future Enhancements
 
@@ -182,18 +207,22 @@ Advanced analytics dashboard
 
 Cloud deployment (AWS / Azure)
 
-Microservices architecture
+Microservices migration
 
-Recommendation system
+Recommendation engine
 
-Email notification system
+Email notifications
 
 👨‍💻 Author
 
-Adarsh Sharma Full Stack Developer
+Adarsh Sharma
+Full Stack Developer
 
-GitHub: https://github.com/Adarsh11Sharma Contact no: 8421505681
+🔗 GitHub:
+https://github.com/Adarsh11Sharma
+
+Contact no: 8421505681
 
 ⭐ Support
 
-If you found this project helpful, please give it a ⭐ on GitHub.
+If you found this project useful, please consider giving it a ⭐ on GitHub.
