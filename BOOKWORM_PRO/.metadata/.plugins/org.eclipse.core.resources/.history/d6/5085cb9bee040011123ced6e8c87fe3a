@@ -1,0 +1,24 @@
+package com.example.Repository;
+
+import java.time.LocalDateTime;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.example.models.LibraryPackagePurchase;
+
+@Repository
+public interface LibraryPackagePurchaseRepository
+        extends JpaRepository<LibraryPackagePurchase, Integer> {
+
+    // ❗ Check if user already has an active package
+    @Query("""
+        SELECT COUNT(p) > 0
+        FROM LibraryPackagePurchase p
+        WHERE p.user.userId = :userId
+          AND (p.purchaseDate
+               + p.libraryPackage.validityDays * 1L) > :now
+    """)
+    boolean existsActivePackage(Integer userId, LocalDateTime now);
+}

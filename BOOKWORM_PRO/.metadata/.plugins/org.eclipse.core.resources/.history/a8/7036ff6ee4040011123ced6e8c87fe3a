@@ -1,0 +1,13 @@
+package com.example.dto;
+
+import java.time.LocalDate;
+
+public class MyLibraryItemResponseDto {
+
+    private Integer packageId;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private Product product;
+
+    // getters & setters
+}
